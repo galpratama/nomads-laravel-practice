@@ -14,7 +14,8 @@ class AddRolesFieldToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+            $table->string('roles')->default('USER');
+                // USER, ADMIN
         });
     }
 
@@ -26,7 +27,8 @@ class AddRolesFieldToUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+            $table->dropColumn('roles');
+                // USER, ADMIN
         });
     }
 }
