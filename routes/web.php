@@ -27,5 +27,3 @@ Route::prefix('admin')
             ->name('dashboard');
     });
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
